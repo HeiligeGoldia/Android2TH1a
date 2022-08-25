@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <script>
+        function addN() {
+            num1 = document.getElementById("1stNum").value;
+            num2 = document.getElementById("2ndNum").value;
+            document.getElementById("result").innerHTML = Number(num1) + Number(num2);
+        }
+    </script>
+
+</head>
+<body>
+    <form>
+        first number: <input type="text" id="1stNum" /> <br>
+        second number: <input type="text" id="2ndNum" /> <br>
+        <input type="button" onclick="addN()" value="Add" />
+    </form>
+    <p>
+        Result: <span id="result"></span>
+    </p>
+</body>
+</html>
