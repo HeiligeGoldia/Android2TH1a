@@ -8,34 +8,38 @@
 </head>
 <body>
     <script>
-        var f = document.createElement("form");
 
         var i = document.createElement("input");
         i.setAttribute('type', "text");
-        i.setAttribute('name', "1stNum");
         i.setAttribute('id', "1stNum");
+        document.body.appendChild(i);
+
+        var sp = document.createElement("br");
+        document.body.appendChild(sp);
 
         var a = document.createElement("input");
         a.setAttribute('type', "text");
-        a.setAttribute('name', "2ndNum");
         a.setAttribute('id', "2ndNum");
+        document.body.appendChild(a);
 
-
-        var s = document.createElement("input")
-        s.setAttribute('type', "submit");
-        s.setAttribute('value', "Add");
+        var s = document.createElement("button")
         s.setAttribute('id', "result");
-        f.appendChild(i);
-        f.appendChild(a);
-        f.appendChild(s);
+        s.innerText = "Sum";
+        document.body.appendChild(s);
 
-        function addN() {
+        var c = document.createElement("div");
+            c.setAttribute('id', "rs");
+            document.body.appendChild(c);
+
+        const btnAdd = document.getElementById("result");
+        console.log(btnAdd)
+        btnAdd.onclick = ()=>{
             num1 = document.getElementById("1stNum").value;
             num2 = document.getElementById("2ndNum").value;
-            document.getElementById("result").innerHTML = Number(num1) + Number(num2);
+            document.getElementById("rs").innerHTML = Number(num1) + Number(num2);
         }
+       
 
-        document.getElementsByTagName('body')[0].appendChild(f);
     </script>
 </body>
 </html>
